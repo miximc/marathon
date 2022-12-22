@@ -1,8 +1,10 @@
+{% load static %}
 <head>
     <h1>Ракета идет на взлет ! {{nomer_okowko}}</h1>
+    <link rel="stylesheet" href="{% static "css/style.css" %}" />
 </head>
 <p>Моя версия ракеты: {{phone}}</p>
 <h1>А сейчас внимание!!</h1>
 <h4>Кто-то будет :)</h4>
-<img src="https://ironman43blog.files.wordpress.com/2017/10/tri.jpg?w=1000">
+<img src="{% static "img/Триатлонист.jpg" %}">
 <p>На фото сверху триатлонист!</p>
