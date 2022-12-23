@@ -1,0 +1,25 @@
+<!--# 1. Создать страницу с пунктами меню-->
+<!--   Меню создаётся из списка строк-->
+<!--   Использовать ветвление и циклы для наполнения страницы-->
+{% load static %}
+<a href="http://127.0.0.1:8000/mainpage/">назад</a>
+<body background="{% static "img/Restorane.jpg" %}">
+<style>
+    body {
+  background-image: "{% static "img/Restorane.jpg" %}";
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+<head><h1>Меню</h1></head>
+<h2>Салаты </h2>
+{% for dish in salats %}
+<li>{{dish}}</li>
+{% endfor %}
+
+<h2>Гарниры</h2>
+{% for gar in garnirs %}
+<li>{{gar}}</li>
+{% endfor %}
+</body>

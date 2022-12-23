@@ -14,16 +14,4 @@ def index(request):
 
     )
 
-def index1(request):
-    context = {
-        'nomer_okowko': 25,
-        'phone': 2,
-        'slovar': [1,2,3,4,5,6]}
 
-    return render(
-        request,                # Запрос
-        'mainpage_1/index.html',# путь к шаблону
-        context,                 # подстановки
-
-
-    )
