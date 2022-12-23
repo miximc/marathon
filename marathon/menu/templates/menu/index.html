@@ -2,6 +2,7 @@
 <!--   Меню создаётся из списка строк-->
 <!--   Использовать ветвление и циклы для наполнения страницы-->
 {% load static %}
+<title>Меню</title>
 <a href="http://127.0.0.1:8000/mainpage/">назад</a>
 <body background="{% static "img/Restorane.jpg" %}">
 <style>
@@ -11,15 +12,22 @@
   background-attachment: fixed;
   background-size: cover;
 }
+
+
 </style>
-<head><h1>Меню</h1></head>
-<h2>Салаты </h2>
-{% for dish in salats %}
-<li>{{dish}}</li>
-{% endfor %}
+<head>
+    <h1>Меню</h1>
+
+    <h2>Салаты </h2>
+    {% for dish in salats %}
+    <li>{{dish}}</li>
+    <link rel="stylesheet" href="{% static "css/style_menu.css" %}" />
+    {% endfor %}
+</head>
 
 <h2>Гарниры</h2>
 {% for gar in garnirs %}
 <li>{{gar}}</li>
 {% endfor %}
 </body>
+
