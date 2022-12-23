@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include
 from django.urls import path
+from django.views.debug import default_urlconf
 
 urlpatterns = [
+    path('', default_urlconf),
     path('admin/', admin.site.urls),
     path('mainpage/', include('mainpage.urls'))
 ]

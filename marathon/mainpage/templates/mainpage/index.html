@@ -1,10 +1,19 @@
 {% load static %}
 <head>
     <h1>Ракета идет на взлет ! {{nomer_okowko}}</h1>
+    {{ slovar.0 }}
+
+
+
     <link rel="stylesheet" href="{% static "css/style.css" %}" />
 </head>
+
 <p>Моя версия ракеты: {{phone}}</p>
 <h1>А сейчас внимание!!</h1>
 <h4>Кто-то будет :)</h4>
+{% for _ in slovar %}
 <img src="https://ss.sport-express.ru/userfiles/materials/170/1706520/large.jpg">
+{% endfor %}
 <p>На фото сверху триатлонист!</p>
+<button>Кнопка</button>
+
