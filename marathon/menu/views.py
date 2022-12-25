@@ -1,6 +1,7 @@
 from django.shortcuts import render
-
+from .models import Sporsmen
 def index(request):
+    rows = Sporsmen.objects.all()
     context = {
 
         'salats':['Греческий',
@@ -10,7 +11,8 @@ def index(request):
         'garnirs':['Паста',
                        'Рис',
                        'Овощи гриль',
-                       'Картофель']
+                       'Картофель'],
+        'sportsmen': rows
     }
     return render(
         request,                # Запрос

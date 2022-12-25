@@ -13,3 +13,15 @@ li {
 
     background: rgba(0,0,0, 0.4);
     }
+
+<div id="clock"></div>
+
+
+l1 {
+    background-image: "{% static "img/Restorane.jpg" %}";
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    }
+
+
