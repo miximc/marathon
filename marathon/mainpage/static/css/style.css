@@ -1,5 +1,17 @@
 
 h1 {
     color: blue;
-    }
+}
 
+.one { 
+     
+    font-family: sans-serif;
+    color:rgb(50, 78, 170);
+    background-color: rgb(253, 223, 187, 0.4);
+    width: 130px ; 
+}
+
+body {
+    background: url(../img/Triathlete.jpg);
+    background-size: cover;
+}

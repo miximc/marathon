@@ -1,27 +1,26 @@
 {% load static %}
-<title>Триатлонец</title>
-<body background="{% static "img/Triathlete.jpg" %}" >
-<style>
-    body {
-  background-image: "{% static "img/Triathlete.jpg" %}";
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-</style>
-
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-    <h1>Ракета идет на взлет ! {{nomer_okowko}}</h1>
-
-    <link rel="stylesheet" href="{% static "css/style.css" %}" />
+  <link rel="stylesheet" href="{% static "css/style.css" %}" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>База данных</title>
 </head>
-<a href="http://127.0.0.1:8000/menu/">ссылка на меню</a>
-<p>Моя версия ракеты: {{phone}}</p>
-<h1>А сейчас внимание!!</h1>
-<h4>Кто-то будет :)</h4>
-
-<img src="https://ss.sport-express.ru/userfiles/materials/170/1706520/large.jpg">
-
-<p>На фото сверху триатлонист!</p>
+<body>
+  <h1>База данных</h1>
+  
+  {% for sp in users %}
+  <p class="one">{{sp.Имя}} {{sp.Фамилия}}</p>
+  
+  <ul>
+    <li>Вес: {{sp.Вес}} Рост: {{sp.Рост}}</li>
+    
+  </ul>
+    {% endfor %}
+  
+  
 
 </body>
+</html>

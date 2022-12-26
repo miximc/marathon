@@ -1,10 +1,12 @@
 from django.shortcuts import render
-import random
+from .models import User
 def index(request):
+    user = User.objects.all()
     context = {
-        'nomer_okowko': 25,
-        'phone': 2,
-        'slovar': [1,2,3,4,5,6]}
+        'users': user
+
+    }
+    
 
     return render(
         request,                # Запрос
