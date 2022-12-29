@@ -10,6 +10,7 @@ h1 {
     background-color: rgb(253, 223, 187, 0.4);
     width: 130px ;
     text-align: center; 
+
 }
 
 body {
@@ -18,6 +19,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 20em;
+    
+   
     
 }
 
