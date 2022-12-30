@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+  
+<head>
+  <script type="text/javascript" src={% static "js/dates.js" %}></script>
+  <link rel="stylesheet" href="{% static "css/style.css" %}" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>База данных</title>
+</head>
+
+<body>
+  <h1>База данных</h1>
+  {% for sp in users %}
+  <p class="one">{{sp.Имя}} {{sp.Фамилия}}</p>
+  
+  <ul>
+    <li>Электронная почта: {{sp.Email}}</li>
+    
+  </ul>
+    {% endfor %}
+  <p>Меню</p>
+  {% for s in sport %}
+  <p>{{s.name}} {{s.last_name}}</p>
+    {% endfor %}
+    <a href="/mainpage"> ссылка</a> 
+    
+</body>
+</html>
